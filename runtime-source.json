@@ -1,0 +1,6 @@
+{
+  "repository": "https://github.com/daxinbytes/page-prototype-runtime.git",
+  "ref": "main",
+  "minimumVersion": "0.7.0",
+  "apiVersion": 1
+}
