@@ -31,7 +31,7 @@ $page-prototype 帮我配置页面原型工具，新增“演示项目”，入�
 $page-prototype 在“演示项目”中，基于原始页面新建“第二轮搜索调整”，保留旧方案。
 ```
 
-完整步骤和常用提问见 [使用说明](references/使用说明.md)。AI 负责环境检查、安装运行时和启动服务；首次 Chrome 扩展加载、配对及站点授权需要用户操作。
+完整步骤和常用提问见 [使用说明](references/使用说明.md)。AI 负责环境检查、安装运行时和启动服务；首次 Chrome 扩展加载、配对及站点授权需要用户操作。0.8 面板支持选择或新建项目、逐步接入页面和管理方案；切换项目保留页面清单，同一页面可被多个项目共用。AI 每次修改后直接应用，面板按钮用于原页对比。0.8.1 补充项目删除、页面移出和方案删除；面板底部提供“结束协作”按钮。0.8.2 修复历史方案预览目标恢复，并采用更紧凑的珊瑚红渐变圆角样式。
 
 调用控制同时配置了 [Codex 的 `allow_implicit_invocation: false`](https://learn.chatgpt.com/docs/build-skills#optional-metadata) 和 [Claude Code 的 `disable-model-invocation: true`](https://code.claude.com/docs/en/skills#control-who-invokes-a-skill)。其他 Agent 是否在加载层面强制手动触发取决于其支持情况；Skill 正文也规定了手动调用边界。
 
