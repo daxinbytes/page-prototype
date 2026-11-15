@@ -27,7 +27,7 @@ export async function locateHome(requested) {
 }
 export async function compatibleInstallation(installation) {
   if (!installation || installation.name !== 'page-prototype-runtime' || installation.apiVersion !== source.apiVersion) return false;
-  if (compareVersions(installation.version, source.minimumVersion) < 0) return false;
+  if (typeof installation.version !== 'string' || !/^\d+\.\d+\.\d+$/.test(installation.version) || compareVersions(installation.version, source.minimumVersion) < 0) return false;
   try {
     for (const path of [installation.tool, join(installation.extension, 'manifest.json')]) await access(path);
     return true;

@@ -1,6 +1,7 @@
 {
   "repository": "https://github.com/daxinbytes/page-prototype-runtime.git",
-  "ref": "main",
+  "ref": "v0.11.0",
+  "bootstrapCommit": "2a62e4ac2bc92c397c142097cc34946ab72a2f88",
   "minimumVersion": "0.8.2",
   "apiVersion": 1
 }

@@ -45,9 +45,9 @@ $page-prototype 在“演示项目”中，基于原始页面新建“第二轮�
 
 ## 更新与开发
 
-Skill 用 `npx skills update page-prototype -g` 更新；运行时与扩展由 Agent 按 [接入与更新](references/接入与更新.md) 执行 `scripts/setup.mjs --update`，然后在 Chrome 重新加载扩展。更新保留方案和配对信息。
+Skill 用 `npx skills update page-prototype -g` 更新；运行时与扩展由 Agent 按 [接入与更新](references/接入与更新.md) 执行 `scripts/setup.mjs --update`，然后在 Chrome 重新加载扩展。更新后运行 `node scripts/tool.mjs doctor` 核对安装、服务和 Chrome 实际加载的版本。用 `--rollback X.Y.Z` 可回到本机已安装的较早版本，项目、草稿和配对信息保留。
 
-运行时最低 Node.js 20、Chrome 125；首次获取和更新需要 Git、npm 及 GitHub/npm 网络。Agent 须能在用户电脑执行命令和读写文件。当前在 macOS 验证。
+运行时最低 Node.js 20、Chrome 125；从远端安装使用固定发布标签（未发布时使用已公开的固定提交），需要 Git、npm 及相应网络。本地发行包支持离线安装。Agent 须能在用户电脑执行命令和读写文件。当前在 macOS 验证。
 
 开发验证可用 `node scripts/setup.mjs --source /绝对路径/page-prototype-runtime --home /临时数据目录`。后续执行 `scripts/tool.mjs` 时设置相同的 `PAGE_PROTOTYPE_HOME`。这一入口可在仓库发布前验证两仓库协作流程。
 
